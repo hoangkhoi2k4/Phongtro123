@@ -12,6 +12,8 @@ Route::controller(UserRoomController::class) -> group(function(){
     Route::get('/user/update/{id}', 'edit')->name('room.update');
     Route::post('/user/update/{id}', 'update');
     Route::post('/user/delete/{id}', 'delete');
+    Route::get('/user/hidden/{id}', 'hidden')->name('room.hidden');
+    Route::get('/user/repost/{id}', 'repost')->name('room.repost');
 
     Route::post('/uploads', 'uploadImages');
     Route::post('/upload', 'uploadVideo');
@@ -32,4 +34,5 @@ Route::controller(UserProfileController::class) -> group(function(){
     Route::get('/user/payment-history', 'paymentHistory')->name('get_user.profile.payment_history');
     Route::get('/user/price-list', 'priceList')->name('get_user.profile.price_list');
     Route::get('/user/deposit', 'deposit')->name('get_user.profile.deposit');
+    Route::get('/user/make-payment', 'makePayment')->name('get_user.profile.make_payment');
 });

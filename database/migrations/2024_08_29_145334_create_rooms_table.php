@@ -33,6 +33,7 @@ return new class extends Migration
             $table->text('map')->nullable();
             $table->bigInteger('subject_id')->default(0);
             $table->text('images')->nullable();
+            $table->text('images_public_id')->nullable();
             $table->text('video_link')->nullable()->comment('Link yt');
             $table->text('video')->nullable();
             $table->timestamps();

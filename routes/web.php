@@ -4,8 +4,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\HomeController;
-use App\Http\Controllers\User\UserRoomController;
-use Illuminate\Auth\Events\Login;
+// use App\Http\Controllers\User\UserRoomController;
+use App\Http\Controllers\User\VNPayController;
+// use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 // Add the missing import statement
@@ -21,38 +22,48 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(HomeController::class) -> group(function(){
+Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name("home");
     Route::get('/home', 'index')->name("home");
 });
 
-Route::controller(LoginController::class) -> group(function(){
-    Route::get('/login', 'index')->name('login');
-    Route::post('/login', 'login')->name('login');
-
-    Route::get('/logout','logout')->name('logout');
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
 });
-Route::controller(RegisterController::class) -> group(function(){
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Route::controller(LoginController::class) -> group(function(){
+//     Route::get('/login', 'index')->name('login');
+//     Route::post('/login', 'login')->name('login');
+
+//     Route::get('/logout','logout')->name('logout');
+// });
+Route::controller(RegisterController::class)->group(function () {
     Route::get('/register', 'index')->name('register');
     Route::post('/register', 'register')->name('register');
 });
 
 
-Route::get('/posting_list', function(){
+Route::get('/posting_list', function () {
     return view('user.postingList');
-}) -> name('posting_list');
+})->name('posting_list');
 
-Route::get('/post', function(){
+Route::get('/post', function () {
     return view('user.post');
-}) -> name('post');
+})->name('post');
 
-Route::controller(CategoryController::class) -> group(function(){
-    Route::get('chuyen-muc-{slug}-{id}', 'index') 
-    -> name('get.category.item')
-    -> where(['slug' => '[a-z-0-9]+', 'id' => '[0-9]+',]);
+Route::controller(CategoryController::class)->group(function () {
+    Route::get('chuyen-muc-{slug}-{id}', 'index')
+        ->name('get.category.item')
+        ->where(['slug' => '[a-z-0-9]+', 'id' => '[0-9]+',]);
 
-    Route::get('user/page/{page}', 'page') -> name('get.category.page');
+    Route::get('user/page/{page}', 'page')->name('get.category.page');
 });
+
+Route::post('/create-payment', [VNPayController::class, 'createPayment']);
+// Route::get('/vnpay-return', [VNPayController::class, 'paymentReturn']);
 
 @include('route_user.php');
 @include('route_admin.php');

@@ -10,8 +10,12 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $totalRooms = Room::count();
-        $posts = Room::orderByDesc('id')->paginate(4);
+        $totalRooms = Room::where('status', 1)
+                    -> count();
+        $posts = Room::where('status', 1) 
+                ->orderByDesc('id')
+                ->paginate(6);
+        
         foreach ($posts as $post) {
             $post->images = explode('*', $post->images);
             $post->images = array_filter($post->images, function($image) {

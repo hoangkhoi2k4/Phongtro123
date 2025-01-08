@@ -78,4 +78,7 @@ class UserProfileController extends Controller
     public function deposit(){
         return view('user.profile.deposit');
     }
+    public function makePayment(){
+        return view('user.profile.make_payment');
+    }
 }

@@ -19,7 +19,7 @@ class CategoryController extends Controller
         $totalRooms = Room::where('category_id', $id)->count();
        
 
-        $rooms = Room::where('category_id', $id)->orderByDesc('id')->paginate(2);
+        $rooms = Room::where('category_id', $id)->orderByDesc('id')->paginate(5);
         foreach ($rooms as $room) {
             $room->images = explode('*', $room->images);
             $room->images = array_filter($room->images, function($image) {

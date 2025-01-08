@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index(){
+    public function showLoginForm(){
         return view('auth.login');
     }
 
@@ -16,6 +16,9 @@ class LoginController extends Controller
        
         $data = $request->except(['_token', 'wp-submit-login', 'redirect']);
         if (Auth::attempt($data)) {
+            if(Auth::user() -> is_admin){
+                return redirect() -> to('/admin/room/index');
+            }
             return redirect() -> to('/');
         }
         return redirect() -> back();

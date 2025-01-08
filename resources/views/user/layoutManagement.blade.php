@@ -15,6 +15,13 @@
     <script src="{{asset('user/asset/js/manage.js')}}"></script>
     <script src="{{asset('user/asset/js/profile.js')}}"></script>
     <script src="{{asset('user/asset/js/upload.js')}}"></script>
-    
+    <script>
+        document.querySelectorAll('input[name="amount"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                const selectedAmount = document.querySelector('input[name="amount"]:checked').value;
+                document.querySelector('.js-price').value = selectedAmount;
+            });
+        });
+    </script>
 </body>
 </html>

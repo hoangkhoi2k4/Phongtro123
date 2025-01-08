@@ -323,11 +323,14 @@
                                     @endif
                                 </figure>
                                 <div class="post-meta">
-                                    <span class="post-title" style="color: #E13427;">
-                                        <span class="star star-5"></span> {{Str::limit($item->name, 30 )}}
-                                    </span>
+                                    <h3 class="post-title">
+                                        <a style="color: #E13427;" href="{{route('get.category.page', ['page' => $item -> id])}}">
+                                            <span class="star star-5"></span> 
+                                            {{$item -> name}}
+                                        </a>
+                                    </h3>
                                     <span class="post-price">{{number_format($item -> price)}}<sup>đ</sup>/tháng</span>
-                                    <time class="post-time" title="Thứ 4, 06:40 14/08/2024">{{$item->created_at}}</time>
+                                    <time class="post-time" title="{{$item->created_at}}">{{$item->created_at}}</time>
                                 </div>
                             </a>
                         </li>

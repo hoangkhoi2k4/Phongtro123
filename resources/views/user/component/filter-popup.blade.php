@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
     <div class="filter-popup js-filter-popup js-filter-popup-city">
         <div class="filter-popup-header"><span class="header-label">Hồ Chí Minh</span>
             <div class="popup-close _js-filter-popup-close js-filter-popup-city-close">Đóng</div>
@@ -73,8 +73,8 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="filter-popup js-filter-popup js-filter-popup-district">
+    </div> --}}
+    {{-- <div class="filter-popup js-filter-popup js-filter-popup-district">
         <div class="filter-popup-header"><span class="header-label">Hồ Chí Minh</span>
             <div class="popup-close _js-filter-popup-close js-filter-popup-district-close">Đóng</div>
         </div>
@@ -177,7 +177,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="black_overlay js-black-overlay"></div>
-</div>
+    {{-- <div class="black_overlay js-black-overlay"></div>
+</div> --}}

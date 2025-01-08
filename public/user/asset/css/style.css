@@ -1570,7 +1570,7 @@ img {
 }
 
 .filter-popup {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 60px;
     left: 0;
@@ -1625,7 +1625,7 @@ img {
     display: block;
 }
 .black_overlay {
-    display: none;
+    /* display: none; */
     background-color: rgba(0, 0, 0, .5);
     position: fixed;
     top: 0;

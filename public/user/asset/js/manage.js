@@ -4,3 +4,4 @@ document.querySelector('.browse_photos').addEventListener('click', function() {
 document.querySelector('.browse_videos').addEventListener('click', function() {
     document.getElementById('fileInputVideo').click();
 });
+

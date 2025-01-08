@@ -192,7 +192,7 @@
                         <div for="browse_photos" class="browse_photos js-dropzone dz-clickable">
                             <i class="icon-upload-image"></i>
                             <span class="js-btn-chon-anh">Thêm Ảnh</span>
-                            <input id="fileInput" style="display: none"type="file" name="" multiple>
+                            <input id="fileInput" style="display: none" type="file" name="" multiple>
                         </div>
                     </div>
                     <div class="list_photos row dropzone-previews" id="list-photos-dropzone-previews"></div>
@@ -209,6 +209,8 @@
                     </div>   
                 </div>
                 
+            </div>
+            <div class="hidden" id="input-ids">
             </div>
             <div class="image-shows" id="input-file-imgs">
             </div>

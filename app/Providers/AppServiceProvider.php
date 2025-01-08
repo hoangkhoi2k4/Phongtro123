@@ -48,8 +48,27 @@ class AppServiceProvider extends ServiceProvider
         } catch (Exception $exception){
 
         }
+
+        try{
+            $postnews = Room::where('status', 1)
+                ->orderByDesc('id')
+                ->paginate(6);
+            foreach ($postnews as $post) {
+                $post->images = explode('*', $post->images);
+                $post->images = array_filter($post->images, function($image) {
+                    return $image !== '';
+                });
+            }
+            foreach ($postnews as $post) {
+                $user = User::select("name", "phone")->find($post->auth_id);
+                $post->user = $user;
+            }
+        } catch (Exception $exception){
+
+        }
         view()->share('categoriesGlobal', $categoriesGlobal ?? []);
         view()->share('categoriesGlobalSidebar', $categoriesGlobalSidebar ?? []);
         view()->share('featureNew', $featureNews ?? []);
+        view()->share('postnews', $postnews ?? []);
     }
 }

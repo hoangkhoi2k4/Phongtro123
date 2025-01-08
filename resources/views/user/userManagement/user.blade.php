@@ -14,8 +14,8 @@
             <li><span>TK Chính:</span> <span style="font-weight: 700;">{{Auth::user()->account_balance}}</span></li>
             
         </ul>
-        <a class="btn btn-warning btn-sm mr-1" href="#">Nạp tiền</a>
-        <a class="btn btn-danger btn-sm" href="#">Đăng tin</a>
+        <a class="btn btn-warning btn-sm mr-1" href="{{ route('get_user.profile.deposit') }}">Nạp tiền</a>
+        <a class="btn btn-danger btn-sm" href="{{ route('room.create') }}">Đăng tin</a>
     </div>
 
     <div style="font-size: 0.9rem; background-color: #fff9e6; padding: 10px 10px 7px; margin: 0 0 10px; border-radius: 5px; display: flex;">

@@ -40,7 +40,7 @@
                     <div class="row addfund_method_list clearfix">
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/bank-transfer.png')}}" alt="Chuyển khoản trực tiếp" title="Chuyển khoản trực tiếp">
                                     </div>
@@ -54,7 +54,7 @@
                                             
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/payment-method.svg')}}" alt="Nạp tiền bằng ATM Internet Banking" title="Nạp tiền bằng Internet Banking">
                                     </div>
@@ -68,7 +68,7 @@
                         
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/credit-card.png')}}" alt="Nạp tiền bằng thẻ tín dụng quốc tế" title="Nạp tiền bằng thẻ tín dụng quốc tế">
                                     </div>
@@ -83,7 +83,7 @@
                         
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/momo.png')}}" alt="Nạp tiền bằng MOMO" title="Nạp tiền bằng MOMO">
                                     </div>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/zalopay.png')}}" alt="Nạp tiền bằng ZaloPay" title="Nạp tiền bằng ZaloPay">
                                     </div>
@@ -107,23 +107,23 @@
                                 </a>
                             </div>
                         </div>
-                                                <div class="col-md-4">
-                                <div class="method_item">
-                                    <a href="#">
-                                        <div class="method_item_icon">
-                                            <img src="{{asset('user/asset/image/shopeepay2.svg')}}" alt="Nạp tiền bằng ShopeePay" title="Nạp tiền bằng ShopeePay">
-                                        </div>
-                                        <div class="method_item_name">
-                                            ShopeePay
-                                        </div>
-                                        <button class="btn btn_select_method">Chọn</button>
-                                    </a>
-                                </div>
+                        <div class="col-md-4">
+                            <div class="method_item">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
+                                    <div class="method_item_icon">
+                                        <img src="{{asset('user/asset/image/shopeepay2.svg')}}" alt="Nạp tiền bằng ShopeePay" title="Nạp tiền bằng ShopeePay">
+                                    </div>
+                                    <div class="method_item_name">
+                                        ShopeePay
+                                    </div>
+                                    <button class="btn btn_select_method">Chọn</button>
+                                </a>
                             </div>
+                        </div>
                                             
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/online-store.svg')}}" alt="Điểm giao dịch, cửa hàng tiện lợi" title="Điểm giao dịch, cửa hàng tiện lợi">
                                     </div>
@@ -137,7 +137,7 @@
                         
                         <div class="col-md-4">
                             <div class="method_item">
-                                <a href="#">
+                                <a href="{{ route('get_user.profile.make_payment') }}">
                                     <div class="method_item_icon">
                                         <img src="{{asset('user/asset/image/qr-code.png')}}" alt="Quét mã QRCode" title="Quét mã QRCode">
                                     </div>

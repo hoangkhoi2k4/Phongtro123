@@ -21,6 +21,12 @@ $('#fileInput').on('change',()=>{
                         '<img src="' + result.paths[index] + '" alt="">' +
                         '<input type="hidden" value="' + result.paths[index] + '" class="product-images" name="images[]">';
                 }
+                let html2 = '';
+                for(let index = 0; index < result.images_public_id.length; index++){
+                    html2 += '<input type="hidden" value="'+result.images_public_id[index]
+                    + '" class="product-images-public-id" name="images_public_id[]">';
+                }
+                $('#input-ids').html(html2);
                 $('#input-file-imgs').html(html);
             }
         }

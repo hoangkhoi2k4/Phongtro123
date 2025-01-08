@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="{{asset('user/asset/image/favicon.ico')}}">
     <link rel="stylesheet" href="{{asset('user/asset/fonts/fontawesome-free-6.6.0-web/css/all.css')}}">
+    <link rel="stylesheet" href="/css/desktop.dashboard.2024.min.css?v=20241231">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <link rel="stylesheet" href="{{asset('user/asset/css/style.css')}}"> --}}
     @if(Auth::user())
@@ -15,6 +16,7 @@
     @else 
         <title>Phongtro123.com</title>
     @endif
+
     <script type="text/javascript">
         base_url = "https://phongtro123.com";
         base_api_url = "https://phongtro123.com/api";
